@@ -31,7 +31,7 @@ client.on('end', function() {
 
 // send random streams of data
 function sendRandomData(client) {
-	var time = Math.floor(Math.random() * 1000);
+	var time = Math.floor(Math.random() * 2000);
 
 	setTimeout(function() {
 		var sensor = mockSensors[Math.floor(Math.random() * mockSensors.length)];
