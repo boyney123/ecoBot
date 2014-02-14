@@ -14,7 +14,8 @@ var mockSensors = [
 	{ sensor: 'range5', maxValue: 400, unit: 'cm' },
 	{ sensor: 'range6', maxValue: 400, unit: 'cm' },
 	{ sensor: 'range7', maxValue: 400, unit: 'cm' },
-	{ sensor: 'range8', maxValue: 400, unit: 'cm' }
+	{ sensor: 'range8', maxValue: 400, unit: 'cm' },
+	{ sensor: 'carbon', maxValue: 1000, unit: 'ppm' }
 ];
 
 // Create TCP connection
@@ -30,7 +31,7 @@ client.on('end', function() {
 
 // send random streams of data
 function sendRandomData(client) {
-	var time = Math.floor(Math.random() * 2000);
+	var time = Math.floor(Math.random() * 1000);
 
 	setTimeout(function() {
 		var sensor = mockSensors[Math.floor(Math.random() * mockSensors.length)];
